@@ -107,3 +107,5 @@ class Fields(models.Model):
 
     def __str__(self):
         return self.name
+
+    helllppppp this complete data?
