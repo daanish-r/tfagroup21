@@ -1,3 +1,3 @@
-"This is a squirrel tracking app"
+"This is the final squirrel tracking app"
 
 Daanish and Aditya
