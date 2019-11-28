@@ -104,8 +104,22 @@ class Fields(models.Model):
             help_text = ('Longitude of the sighting')
             null=True
             )
+    
+    Running = models.BooleanField(default=True)
+    Chasing = models.BooleanField(default=True)
+    Climbing = models.BooleanField(default=True)
+    Eating = models.BooleanField(default=True)
+    Foraging = models.BooleanField(default=True)
+    Kuks = models.BooleanField(default=True)
+    Quaas = models.BooleanField(default=True)
+    Moans = models.BooleanField(default=True)
+    Tail_flags = models.BooleanField(default=True)
+    Tail_twitches = models.BooleanField(default=True)
+    Approaches  = models.BooleanField(default=True)
+    Indifferent = models.BooleanField(default=True)
+    Runs_from = models.BooleanField(default=True)
+    
 
     def __str__(self):
         return self.name
 
-    helllppppp this complete data?
