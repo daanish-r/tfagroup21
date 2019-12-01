@@ -1,7 +1,7 @@
 from django.contrib import admin
 
-from .models import Pet
+from .models import Fields
 
-admin.site.register(Pet)
+admin.site.register(Fields)
 
 # Register your models here.
