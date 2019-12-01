@@ -105,20 +105,56 @@ class Fields(models.Model):
             null=True
             )
     
-    Running = models.BooleanField(default=True)
-    Chasing = models.BooleanField(default=True)
-    Climbing = models.BooleanField(default=True)
-    Eating = models.BooleanField(default=True)
-    Foraging = models.BooleanField(default=True)
-    Kuks = models.BooleanField(default=True)
-    Quaas = models.BooleanField(default=True)
-    Moans = models.BooleanField(default=True)
-    Tail_flags = models.BooleanField(default=True)
-    Tail_twitches = models.BooleanField(default=True)
-    Approaches  = models.BooleanField(default=True)
-    Indifferent = models.BooleanField(default=True)
-    Runs_from = models.BooleanField(default=True)
-    
+    Running = models.BooleanField(
+            help_text = ("Running or not"),
+            default=True,
+            )
+
+    Chasing = models.BooleanField(
+            help_text = ("Chasing or not"),
+            default=True,
+            )
+
+    Climbing = models.BooleanField(
+            help_text = ("Climbing or not"),
+            default=True,
+            )
+
+    Eating = models.BooleanField(
+            help_text = ("Eating or not"),
+            default=True,
+            )
+
+    Foraging = models.BooleanField(
+            help_text = ("Foraging or not"),
+            default=True,
+            )
+
+    Kuks = models.BooleanField(
+            help_text = ("Kuks boolean"),
+            default=True,
+            )
+
+    Quaas = models.BooleanField(
+            help_text = ("Quaas boolean"),
+            default=True,
+            )
+
+    Moans = models.BooleanField(
+            help_text = ("Moans boolean"),
+            default=True,
+            )
+
+    Tail_flags = models.BooleanField(
+            help_text = ("Tail flags boolean"),
+            default=True,
+            )
+
+    Tail_twitches = models.BooleanField(
+            help_text = ("Tail twitches or not"),
+            default=True,
+            )
+
 
     def __str__(self):
         return self.name
