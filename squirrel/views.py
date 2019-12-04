@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.forms import ModelForm
 
 from .models import Fields
 
@@ -8,7 +9,7 @@ def index(request):
 
 class SightingForm(ModelForm):
     class Meta:
-        model = Sighting
+        model = Fields
         fields = '__all__'
 
 def sighting_list(request, template_name='squirrel/all.html'):
