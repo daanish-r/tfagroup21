@@ -9,8 +9,8 @@ class Fields(models.Model):
     Unique_Squirrel_ID  = models.CharField(
             help_text = _('Unique squirrel ID'),
             max_length=100,
-            unique = True
-            primary_key = True
+            unique = True,
+            primary_key = True,
          )
     
     Specific_Location  = models.CharField(
@@ -44,12 +44,12 @@ class Fields(models.Model):
 
     Juvenile = 'Juvenile'
     Adult = 'Adult'
-    ? = '?'
+    NAN = '?'
     
     AGE_CHOICES = (
             (Juvenile, 'Juvenile'),
             (Adult, 'Adult'),
-            (?, '?'),
+            (NAN, '?'),
         )
 
 
@@ -57,7 +57,7 @@ class Fields(models.Model):
         help_text = _('Age of the squirrel'),
         max_length = 100,
         choices = AGE_CHOICES,
-        null = True
+        null = True,
         )
 
     Grey = 'Grey'
@@ -75,7 +75,7 @@ class Fields(models.Model):
         help_text = _('Primary fur color of the squirrel'),
         max_length = 100,
         choices = FUR_CHOICES,
-        null = True
+        null = True,
         )
 
     Above = 'Above'
@@ -91,18 +91,18 @@ class Fields(models.Model):
         help_text = _('Locatrion of the squirrel'),
         max_length = 100,
         choices = LOCATION_CHOICES,
-        null = True
+        null = True,
         )
 
 
     Latitude = models.IntegerField(
-            help_text = ('Latitude of the sighting')
-            null=True
+            help_text = ('Latitude of the sighting'),
+            null=True,
             )
 
     Longitude = models.IntegerField(
-            help_text = ('Longitude of the sighting')
-            null=True
+            help_text = ('Longitude of the sighting'),
+            null=True,
             )
     
     Running = models.BooleanField(
