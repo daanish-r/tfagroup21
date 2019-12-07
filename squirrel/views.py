@@ -29,7 +29,7 @@ def sighting_add(request, template_name='squirrel/add.html'):
         if form.is_valid():
             form.save()
             return redirect('sighting_list')
-    else: 
+    else: i
         form = SightingForm()
     
     context = {
@@ -37,4 +37,14 @@ def sighting_add(request, template_name='squirrel/add.html'):
     }
     return render(request, template_name, context)
 
-
+def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
+    sighting = get_object_or_404(Sighting, pk=pk)
+    form = SightingForm(request.POST or None, instance=sighting)
+    if request.method=='POST' and 'update' in request.POST:
+        if form.is_valid():
+            form.save()
+            return redirect('sighting_list')
+    if request.method=='POST' and 'delete' in request.POST:
+        sighting.delete()
+        return redirect('sighting_list')
+    return render(request, template_name, {'form':form})
