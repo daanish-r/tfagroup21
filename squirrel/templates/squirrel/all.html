@@ -16,11 +16,11 @@
           <th scope="col">Date</th>
           <th scope="col">Update</th>
         </tr>
-        {% for sighting in sightings %}
+        {% for Fields in sightings %}
         <tr>
-          <td> {{ sighting.squirrel_id }} </td>
-          <td> {{ sighting.date }} </td>
-          <td> <a href="{% url "sighting_update" sighting.squirrel_id %}" class="badge badge-primary">update</a></td>
+          <td> {{ Fields.Update_Squirrel_ID }} </td>
+          <td> {{ Fields.Date }} </td>
+          <td> <a href="{% url "sighting_update" Fields.Unique_Squirrel_ID%}" class="badge badge-primary">update</a></td>
         </tr>
         {% endfor %}
     </table>
