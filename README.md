@@ -1,11 +1,14 @@
 # Squirrel Tracker in Central Park
 
 This app is made to keep a track of all the squirrels in Central Park
+
 The project can be cloned using the link below - 
 
 ## Contributors details
 Group 21
+
 Name - Aditya Baser (asb2287)
+
 Daanish Rode ()
 
 ## Prerequisites
