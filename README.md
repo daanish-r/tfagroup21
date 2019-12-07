@@ -17,12 +17,14 @@ This app is constructed by using the following softwares
 4) html5
 5) bootstrap
 
-##Importing the data
+## Importing the data
+
 A command that can be used to import the data from the 2018 census file (in CSV format). The file path should be specified at the command line after the name of the management command. 
 
 python manage.py import_squirrel_data /path/to/file.csv
 
-##Exporting the data
+## Exporting the data
+
 A command that can be used to export the data in CSV format. The file path should be specified at the command line after the name of the management command. 
 
 python manage.py export_squirrel_data /path/to/file.csv
