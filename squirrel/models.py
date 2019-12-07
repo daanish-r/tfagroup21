@@ -156,17 +156,17 @@ class Fields(models.Model):
             )
     
     Approaches = models.BooleanField(
-            help_text = ("tick if it approaches you")
+            help_text = ("tick if it approaches you"),
             default=True,
             )
 
     Indifferent = models.BooleanField(
-            help_text = ("tick if it is indifferent to your presence")
+            help_text = ("tick if it is indifferent to your presence"),
             default=True,
             )    
     
     Runs_from = models.BooleanField(
-            help_text = ("tick if it starts running away from you")
+            help_text = ("tick if it starts running away from you"),
             default=True,
             )
     
