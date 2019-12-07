@@ -1,7 +1,7 @@
 from django.http import HttpResponse
 from django.forms import ModelForm
 from django.shortcuts import render
-from django.shortcuts import redirec
+from django.shortcuts import redirect
 
 from .models import Fields
 from .forms import SightingForm 
