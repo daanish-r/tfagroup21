@@ -95,12 +95,12 @@ class Fields(models.Model):
         )
 
 
-    Latitude = models.IntegerField(
+    Latitude = models.FloatField(
             help_text = ('input the latitude of the sighting'),
             null=True,
             )
 
-    Longitude = models.IntegerField(
+    Longitude = models.FloatField(
             help_text = ('input the longitude of the sighting'),
             null=True,
             )
