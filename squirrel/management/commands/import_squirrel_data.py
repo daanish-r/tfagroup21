@@ -12,8 +12,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         with open(options['csv_file']) as fp:
             reader = csv.DictReader(fp)
-            data = list(reader)
-        for row in data:
+        for row in reader:
                 F = Fields()
                 try:
                     F.Longitude = row['X']
