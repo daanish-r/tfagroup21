@@ -19,8 +19,7 @@ class Command(BaseCommand):
                         row[i]= False
                     else:
                         row[i]= True
-                F = Fields()
-                    try:
+            F = Fields( 
                         F.Longitude = row['X']
                         F.Latitude = row['Y']
                         F.Unique_Squirrel_ID = row['Unique Squirrel ID']
@@ -44,6 +43,6 @@ class Command(BaseCommand):
                         F.Approaches = row['Approaches']
                         F.Indifferent = row['Indifferent']
                         F.Runs_from = row['Runs from']
-                    except Fields.DoesNotExist:
-                        raise CommandError('there is some error')
-                F.save()
+            )
+                 
+            F.save()
