@@ -7,7 +7,7 @@ class Command(BaseCommand):
     help = 'Import Squirrel Census Data'
 
     def add_arguments(self, parser):
-        parser.add_argument('csv_file')
+        parser.add_argument('csv_file', nargs = '+', type = str)
 
     def handle(self, *args, **options):
         with open(options['csv_file']) as fp:
