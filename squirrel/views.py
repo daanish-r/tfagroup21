@@ -34,7 +34,7 @@ def sighting_add(request, template_name='squirrel/add.html'):
     
     context = {
         'form':form,
-    }
+    :x
     return render(request, template_name, context)
 
 def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
