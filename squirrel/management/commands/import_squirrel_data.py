@@ -26,7 +26,7 @@ class Command(BaseCommand):
                             SHIFT = row['Shift'],
                             Date = dt.datetime.strptime(row['Date'],'%m%d%Y'),
                             AGE = row['Age'],
-                            PRIMARY_FUR_COLOUR = row['Primary Fur Color'],
+                            PRIMARY_FUR_COLOR = row['Primary Fur Color'],
                             LOCATION = row['Location'],
                             Specific_Location = row['Specific Location'],
                             Running = row['Running'],
