@@ -12,7 +12,7 @@ class Command(BaseCommand):
     def handle(self, *args, **options):
         path=str(options['csv_file'][0])
         with open(path) as fp:
-            reader = csv.reader(fp)
+            reader = csv.DictReader(fp)
         for row in reader:
                 F = Fields()
                 try:
