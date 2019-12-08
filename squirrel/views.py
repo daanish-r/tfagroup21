@@ -52,7 +52,7 @@ def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
               }
     return render(request, template_name, context)
         
-def squirrel_stats(request, template_name = 'squirrel/sighting_stats.html'):
+def sighting_stats(request, template_name = 'squirrel/sighting_stats.html'):
     squirrel_stats1=Fields.objects.all().count()
     squirrel_stats2=Fields.objects.filter(PRIMARY_FUR_COLOR='Grey').count()
     squirrel_stats3=Fields.objects.filter(Chasing='True').count()
