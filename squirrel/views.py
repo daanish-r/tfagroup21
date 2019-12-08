@@ -29,12 +29,12 @@ def sighting_add(request, template_name='squirrel/add.html'):
         if form.is_valid():
             form.save()
             return redirect('sighting_list')
-    else: i
+    else:
         form = SightingForm()
     
     context = {
         'form':form,
-    :x
+        }
     return render(request, template_name, context)
 
 def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
@@ -47,4 +47,22 @@ def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
     if request.method=='POST' and 'delete' in request.POST:
         sighting.delete()
         return redirect('sighting_list')
-    return render(request, template_name, {'form':form})
+    context = {
+              'form':form,
+              }
+    return render(request, template_name, context)
+        
+def squirrel_stats(request, template_name = 'squirrel/sighting_stats.html'):
+    squirrel_stats1=Fields.objects.all().count()
+    squirrel_stats2=Fields.objects.filter(PRIMARY_FUR_COLOR='Grey').count()
+    squirrel_stats3=Fields.objects.filter(Chasing='True').count()
+    squirrel_stats4=Fields.objects.filter(Kuks='True').count()
+    squirrel_stats5=Fields.objects.filter(Approaches='True').count()
+    context={
+            'squirrel_stats1':squirrel_stats1,
+            'squirrel_stats2':squirrel_stats2,
+            'squirrel_stats3':squirrel_stats3,
+            'squirrel_stats4':squirrel_stats4,
+            'squirrel_stats5':squirrel_stats5,
+            }
+    return render(request, template_name, context)
