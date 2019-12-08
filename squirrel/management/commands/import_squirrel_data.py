@@ -14,7 +14,7 @@ class Command(BaseCommand):
         with open(path) as fp:
             reader = csv.DictReader(fp)
             for row in reader:
-                for i in ('Running','Chasing','Climbing','Eating','Foraging','Kuks','Quuas','Moans','Tail_flags','Tail_twitches','Approaches','Indifferent', 'Runs_from'):
+                for i in ('Running','Chasing','Climbing','Eating','Foraging','Kuks','Quaas','Moans','Tail_flags','Tail_twitches','Approaches','Indifferent', 'Runs_from'):
                         if row[i]=='false':
                             row[i]= False
                         else:
