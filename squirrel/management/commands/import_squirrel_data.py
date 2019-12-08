@@ -10,8 +10,9 @@ class Command(BaseCommand):
         parser.add_argument('csv_file', nargs = '+', type = str)
 
     def handle(self, *args, **options):
-        with open(options['csv_file']) as fp:
-            reader = csv.DictReader(fp)
+        path=str(options['csv_file'][0])
+        with open(path) as fp:
+            reader = csv.reader(fp)
         for row in reader:
                 F = Fields()
                 try:
