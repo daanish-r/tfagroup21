@@ -36,7 +36,7 @@ class Command(BaseCommand):
                             Foraging = row['Foraging'],
                             Other_Activities = row['Other Activities'],
                             Kuks = row['Kuks'],
-                            Quuas = row['Quaas'],
+                            Quaas = row['Quaas'],
                             Moans = row['Moans'],
                             Tail_flags = row['Tail flags'],
                             Tail_twitches = row['Tail twitches'],
