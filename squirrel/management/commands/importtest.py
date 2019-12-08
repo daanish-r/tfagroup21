@@ -10,7 +10,7 @@ class Command(BaseCommand):
     def handle(self,*arg,**options):
         import csv
         import datetime
-        from  tracker.models import Sighting
+        from  squirrel.models import Fields
         path=str(options['csv_file'][0])
         with open(path) as f:
             data=csv.reader(f)
@@ -23,29 +23,29 @@ class Command(BaseCommand):
                     else:
                         line[i]= True
                 line[5]=datetime.datetime.strptime(line[5],"%m%d%Y").strftime("%Y-%m-%d")
-                sighting= Fields(latitude=line[1],
-                    longitude=line[0],
-                    squirrel_id=line[2],
-                    shift=line[4],
-                    date=line[5],
-                    age=line[7],
-                    fur_color=line[8],
-                    location=line[12],
-                    specific_location=line[14],
-                    running=line[15],
-                    chasing=line[16],
-                    climbing=line[17],
-                    eating=line[18],
-                    foraging=line[19],
-                    other_activities=line[20],
-                    kuks=line[21],
-                    quaas=line[22],
-                    moans=line[23], 
-                    tail_flags=line[24],
-                    tail_twitches=line[25],
-                    approaches=line[26],
-                    indifferent=line[27],
-                    runs_from=line[28],)
+                sighting= Fields(Latitude=line[1],
+                    Longitude=line[0],
+                    Unique_Squirrel_ID=line[2],
+                    SHIFT=line[4],
+                    Date=line[5],
+                    AGE=line[7],
+                    PRIMARY_FUR_COLOR = line[8],
+                    LOCATION=line[12],
+                    Specific_Location=line[14],
+                    Running=line[15],
+                    Chasing=line[16],
+                    Climbing=line[17],
+                    Eating=line[18],
+                    Foraging=line[19],
+                    Other_Activities=line[20],
+                    Kuks=line[21],
+                    Quaas=line[22],
+                    Moans=line[23], 
+                    Tail_flags=line[24],
+                    Tail_twitches=line[25],
+                    Approaches=line[26],
+                    Indifferent=line[27],
+                    Runs_from=line[28],)
                 #try:
                 sighting.save()
                  #   counter+=1

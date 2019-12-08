@@ -14,7 +14,7 @@ class Command(BaseCommand):
         with open(path) as fp:
             reader = csv.DictReader(fp)
         for row in reader:
-                F = Fields()
+            F = Fields()
                 try:
                     F.Longitude = row['X']
                     F.Latitude = row['Y']
