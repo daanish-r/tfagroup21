@@ -38,7 +38,7 @@ def sighting_add(request, template_name='squirrel/add.html'):
     return render(request, template_name, context)
 
 def sighting_update(request, template_name='squirrel/update.html'):
-    form = SightingForm(request.POST or None, instance=sighting)
+    form = SightingForm(request.POST or None)
     if request.method=='POST' and 'update' in request.POST:
         if form.is_valid():
             form.save()
