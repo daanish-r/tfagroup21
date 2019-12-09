@@ -4,6 +4,8 @@
 		<form method="post">
 			{% csrf_token %}     
 			{{ form.as_p }}
+			<input type="submit" class="btn btn-primary" name="update" value="Submit">
+      			<input type="submit" class="btn btn-danger" name="delete" value="Delete">
 			<br>
 			<input type="submit" name="update">
 		</form>
