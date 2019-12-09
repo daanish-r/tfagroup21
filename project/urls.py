@@ -19,7 +19,7 @@ from django.urls import include,path
 from squirrel import views
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name=),
+    path('admin/', admin.site.urls),
     path('sightings/',views.sighting_list, name='sighting_list'),
     path('map/',views.sighting_map, name='sighting_map'),
     path('add/',views.sighting_add, name='sighting_add'),
