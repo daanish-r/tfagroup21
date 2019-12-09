@@ -37,8 +37,8 @@ def sighting_add(request, template_name='squirrel/add.html'):
         }
     return render(request, template_name, context)
 
-def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
-    sighting = get_object_or_404(Sighting, pk=pk)
+def sighting_update(request, template_name='squirrel/update.html'):
+    sighting = get_object_or_404(Fields)
     form = SightingForm(request.POST or None, instance=sighting)
     if request.method=='POST' and 'update' in request.POST:
         if form.is_valid():
@@ -52,7 +52,7 @@ def sighting_update(request, pk, template_name='squirrel/sighting_form.html'):
               }
     return render(request, template_name, context)
         
-def sighting_stats(request, template_name = 'squirrel/sighting_stats.html'):
+def sighting_stats(request, template_name = 'squirrel/stats.html'):
     squirrel_stats1=Fields.objects.all().count()
     squirrel_stats2=Fields.objects.filter(PRIMARY_FUR_COLOR='Grey').count()
     squirrel_stats3=Fields.objects.filter(Chasing='True').count()
