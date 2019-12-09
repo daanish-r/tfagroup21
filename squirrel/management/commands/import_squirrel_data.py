@@ -7,38 +7,42 @@ class Command(BaseCommand):
     help = 'Import Squirrel Census Data'
 
     def add_arguments(self, parser):
-        parser.add_argument('csv_file')
+        parser.add_argument('csv_file', nargs = '+', type = str)
 
     def handle(self, *args, **options):
-        with open(options['csv_file']) as fp:
+        path=str(options['csv_file'][0])
+        with open(path) as fp:
             reader = csv.DictReader(fp)
-            data = list(reader)
-        for row in data:
-                F = Fields()
-                try:
-                    F.Longitude = row['X']
-                    F.Latitude = row['Y']
-                    F.Unique_Squirrel_ID = row['Unique Squirrel ID']
-                    F.SHIFT = row['Shift']
-                    F.Date = dt.datetime.strptime(row['Date'],'%m%d%Y')
-                    F.AGE = row['Age']
-                    F.PRIMARY_FUR_COLOUR = row['Primary Fur Color']
-                    F.LOCATION = row['Location']
-                    F.Specific_Location = row['Specific Location']
-                    F.Running = row['Running']
-                    F.Chasing = row['Chasing']
-                    F.Climbing = row['Climbing']
-                    F.Eating = row['Eating']
-                    F.Foraging = row['Foraging']
-                    F.Other_Activities = row['Other Activities']
-                    F.Kuks = row['Kuks']
-                    F.Quuas = row['Quaas']
-                    F.Moans = row['Moans']
-                    F.Tail_flags = row['Tail flags']
-                    F.Tail_twitches = row['Tail twitches']
-                    F.Approaches = row['Approaches']
-                    F.Indifferent = row['Indifferent']
-                    F.Runs_from = row['Runs from']
-                except Fields.DoesNotExist:
-                    raise CommandError('there is some error')
+            for row in reader:
+                for i in ('Running','Chasing','Climbing','Eating','Foraging','Kuks','Quaas','Moans','Tail flags','Tail twitches','Approaches','Indifferent', 'Runs from'):
+                        if row[i]=='false':
+                            row[i]= False
+                        else:
+                            row[i]= True
+                F = Fields( 
+                            Longitude = row['X'],
+                            Latitude = row['Y'],
+                            Unique_Squirrel_ID = row['Unique Squirrel ID'],
+                            SHIFT = row['Shift'],
+                            Date = dt.datetime.strptime(row['Date'],'%m%d%Y'),
+                            AGE = row['Age'],
+                            PRIMARY_FUR_COLOR = row['Primary Fur Color'],
+                            LOCATION = row['Location'],
+                            Specific_Location = row['Specific Location'],
+                            Running = row['Running'],
+                            Chasing = row['Chasing'],
+                            Climbing = row['Climbing'],
+                            Eating = row['Eating'],
+                            Foraging = row['Foraging'],
+                            Other_Activities = row['Other Activities'],
+                            Kuks = row['Kuks'],
+                            Quaas = row['Quaas'],
+                            Moans = row['Moans'],
+                            Tail_flags = row['Tail flags'],
+                            Tail_twitches = row['Tail twitches'],
+                            Approaches = row['Approaches'],
+                            Indifferent = row['Indifferent'],
+                            Runs_from = row['Runs from'],
+                           )
+                 
                 F.save()
