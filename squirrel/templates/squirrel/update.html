@@ -2,11 +2,13 @@
 <html>
 	<body>
 		<form method="post">
-			{% csrf_token %}     
-			{{ form.as_p }}
-			<input type="submit" class="btn btn-primary" name="update" value="Submit">
-      			<input type="submit" class="btn btn-danger" name="delete" value="Delete">
-			<br>
+			{% for s in sightings %}
+			<tr>
+			<td> 
+			<a href = "{% url 'squirrel:update' s.Unique_Squirrel_ID %}">{{ s.Unique_Squirrel_ID }}</a>
+			</td>
+			</tr>
+			{% endfor %}
 		</form>
 	</body>
 </html>
