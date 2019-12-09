@@ -12,13 +12,12 @@
     <table class="table table-striped">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Squirrel ID</th>
+          <th scope="col">Unique_Squirrel_ID</th>
           <th scope="col">Date</th>
-          <th scope="col">Update</th>
         </tr>
         {% for Fields in sightings %}
         <tr>
-          <td> {{ Fields.Update_Squirrel_ID }} </td>
+          <td> {{ Fields.Unique_Squirrel_ID }} </td>
           <td> {{ Fields.Date }} </td>
         </tr>
         {% endfor %}
