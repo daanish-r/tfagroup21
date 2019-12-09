@@ -14,11 +14,32 @@
         <tr>
           <th scope="col">Unique_Squirrel_ID</th>
           <th scope="col">Date</th>
+          <th scope="col">Longitude</th>
+          <th scope="col">Latitude</th>
+          <th scope="col">SHIFT</th>
+          <th scope="col">AGE</th>
+          <th scope="col">PRIMARY_FUR_COLOR</th>
+          <th scope="col">LOCATION</th>
+          <th scope="col">Specific_Location</th>
+          <th scope="col">Running</th>
+          <th scope="col">Chasing</th>
+          <th scope="col">Climbing</th>
+          <th scope="col">Eating</th>
+          <th scope="col">Foraging</th>
+          <th scope="col">Other_Activities</th>
+          <th scope="col">Kuks</th>
+          <th scope="col">Quaas</th>
+          <th scope="col">Moans</th>
+          <th scope="col">Tail_flags</th>
+          <th scope="col">Tail_twitches</th>
+          <th scope="col">Approaches</th>
+          <th scope="col">Indifferent</th>
+          <th scope="col">Runs_from</th>
         </tr>
         {% for Fields in sightings %}
         <tr>
-          <td> {{ Fields.Unique_Squirrel_ID }} </td>
-          <td> {{ Fields.Date }} </td>
+          <td> {{Fields.Unique_Squirrel_ID}} </td>
+          <td> {{Fields.Date}} </td>
           <td> {{Fields.Longitude}} </td>
           <td> {{Fields.Latitude}} </td>
           <td> {{Fields.SHIFT}} </td>
