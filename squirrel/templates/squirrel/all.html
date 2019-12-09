@@ -12,22 +12,37 @@
     <table class="table table-striped">
       <thead class="thead-light">
         <tr>
-          <th scope="col">Squirrel ID</th>
+          <th scope="col">Unique_Squirrel_ID</th>
           <th scope="col">Date</th>
-          <th scope="col">Update</th>
         </tr>
         {% for Fields in sightings %}
         <tr>
-          <td> {{ Fields.Update_Squirrel_ID }} </td>
+          <td> {{ Fields.Unique_Squirrel_ID }} </td>
           <td> {{ Fields.Date }} </td>
-          <td> <a href="{% url "sighting_update" Fields.Unique_Squirrel_ID%}" class="badge badge-primary">update</a></td>
+          <td> {{Fields.Longitude}} </td>
+          <td> {{Fields.Latitude}} </td>
+          <td> {{Fields.SHIFT}} </td>
+          <td> {{Fields.AGE}} </td>
+          <td> {{Fields.PRIMARY_FUR_COLOR}} </td>
+          <td> {{Fields.LOCATION}} </td>
+          <td> {{Fields.Specific_Location}} </td>
+          <td> {{Fields.Running}} </td>
+          <td> {{Fields.Chasing}} </td>
+          <td> {{Fields.Climbing}} </td>
+          <td> {{Fields.Eating}} </td>
+          <td> {{Fields.Foraging}} </td>
+          <td> {{Fields.Other_Activities}} </td>
+          <td> {{Fields.Kuks}} </td>
+          <td> {{Fields.Quaas}} </td>
+          <td> {{Fields.Moans}} </td>
+          <td> {{Fields.Tail_flags}} </td>
+          <td> {{Fields.Tail_twitches}} </td>
+          <td> {{Fields.Approaches}} </td>
+          <td> {{Fields.Indifferent}} </td>
+          <td> {{Fields.Runs_from}} </td>
         </tr>
         {% endfor %}
     </table>
     <a href="{% url "sighting_add" %}" class="btn btn-success">add a new sighting</a>
-
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 </html>
