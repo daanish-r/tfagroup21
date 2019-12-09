@@ -2,13 +2,10 @@
 <html>
 	<body>
 		<form method="post">
-			{% for s in sightings %}
-			<tr>
-			<td> 
-			<a href = "{% url 'squirrel:update' s.Unique_Squirrel_ID %}">{{ s.Unique_Squirrel_ID }}</a>
-			</td>
-			</tr>
-			{% endfor %}
+			{% csrf_token %}         
+			{{ form.as_p }}
+			<br>
+			<input type="submit" name="add">
 		</form>
 	</body>
 </html>
