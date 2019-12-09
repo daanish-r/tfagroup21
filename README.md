@@ -2,12 +2,15 @@
 
 This app is made to keep a track of all the squirrels in Central Park
 
-The project can be cloned using the link below - 
+Link for the app:
+https://tools-for-analytics-2019.appspot.com/
 
 ## Contributors details
-Group 21
+Project group 21; Section 2
 
-Name - Aditya Baser (asb2287)
+Name:
+
+Aditya Baser (asb2287)
 
 Daanish Rode (dsr2152)
 
