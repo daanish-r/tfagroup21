@@ -20,10 +20,10 @@ from squirrel import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('sightings/',views.sighting_list, name='sighting_list'),
-    path('map/',views.sighting_map, name='sighting_map'),
-    path('add/',views.sighting_add, name='sighting_add'),
-    path('stats/', views.sighting_stats, name='sighting_stats'),
-    path('update/', views.sighting_update, name='sighting_update'),
-    path('', views.index, name='index'),
+    path('sightings/',views.sighting_list),
+    path('map/',views.sighting_map),
+    path('add/',views.sighting_add),
+    path('stats/', views.sighting_stats),
+    path('update/', views.sighting_update),
+    path('', views.index),
 ]
