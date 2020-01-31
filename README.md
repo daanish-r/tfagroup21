@@ -3,7 +3,12 @@
 This app is made to keep a track of all the squirrels in Central Park
 
 Link for the app:
-https://tools-for-analytics-2019.appspot.com/
+Map - https://tools-for-analytics-2019.appspot.com/map
+
+Sightings - https://tools-for-analytics-2019.appspot.com/sightings
+
+Update - https://tools-for-analytics-2019.appspot.com/update
+
 
 ## Contributors details
 Project group 21; Section 2
